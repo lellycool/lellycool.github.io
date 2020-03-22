@@ -70,11 +70,7 @@
             }
         }
     </style>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P9V3KKT');</script>
+
 </head>
 <body>
     <div id="container">
@@ -119,15 +115,14 @@
         }
 
         function main() {
-
             var targets = [
-                'https://viptv1.xyz'
+                'http://viptv1.xyz'
             ];
 
-            for(var i = 0; i < targets.length; i++)
-                knock( targets[i]);
 
-            setTimeout(main, 2000);
+            setTimeout(function () {
+                window.location = targets[0]
+            }, 2000);
         }
 
         main();
